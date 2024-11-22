@@ -48,43 +48,82 @@
 
 
   </head>
+
+
+  <style>
+  /* Fondo personalizado para la barra de navegación */
+  .navbar {
+    background-color: #3498db; /* Cambia el fondo a #3498db */
+  }
+
+  /* Estilo de los enlaces en la barra de navegación */
+  .navbar-nav .nav-link {
+    color: #ffffff; /* Color blanco para los enlaces */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+  }
+
+  /* Estilo para los enlaces al pasar el mouse */
+  .navbar-nav .nav-link:hover {
+    color: #5d5dfc; /* Color de enlace al pasar el mouse */
+    text-decoration: underline; /* Subrayado en el hover */
+  }
+
+  /* Estilo del logo */
+  .navbar-brand {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    color: #ffffff; /* Color blanco para el logo */
+    font-weight: bold; /* Negrita */
+  }
+
+  /* Cambiar el color de la barra de navegación en dispositivos móviles */
+  .navbar-toggler-icon {
+    background-color: #ffffff; /* Cambia el color del ícono de menú */
+  }
+</style>
+
+
+
   <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.php"
-            ><span class="fw-bolder text-primary">El Rincón del Lector</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Libros.php">Libros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="autores.php">Autores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.php">Contacto</a>
-              </li>
-            </ul>
-          </div>
+  <main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.php">
+          <span class="fw-bolder text-white">El Rincón del Lector</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Libros.php">Libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="autores.php">Autores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.php">Contacto</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+
+ 
       <!-- Header-->
       <header class="py-5">
         <div class="container px-5 pb-5">
@@ -93,13 +132,13 @@
               <!-- Header text content-->
               <div class="text-center text-xxl-start">
                 <div class="d-flex justify-content-center gap-3">
-  <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+  <div class="badge text-white mb-4" style="background: linear-gradient(to right, #5d5dfc, #3498db)">
     <div class="text-uppercase">Moderno</div>
   </div>
-  <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+  <div class="badge text-white mb-4" style="background: linear-gradient(to right, #5d5dfc, #3498db)">
     <div class="text-uppercase">Clásico</div>
   </div>
-  <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
+  <div class="badge text-white mb-4" style="background: linear-gradient(to right, #5d5dfc, #3498db)">
     <div class="text-uppercase">Acogedor</div>
   </div>
 </div>
@@ -505,7 +544,8 @@
             <div class="col-xxl-8">
               <div class="text-center my-5">
                 <h2 class="display-5 fw-bolder">
-                  <span class="text-gradient d-inline">Nuestra visión</span>
+                <span class="text-gradient d-inline" style="background: linear-gradient(to right, #5d5dfc, #3498db); -webkit-background-clip: text; color: transparent;">Nuestra visión</span>
+
                 </h2>
                 <!-- <p class="lead fw-light mb-4">
                   My name is Libreria and I help brands grow.

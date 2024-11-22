@@ -90,43 +90,90 @@ h1 {
 
     </style>
   </head>
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.php"
-            ><span class="fw-bolder text-primary">Libreria</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Libros.php">Libros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="autores.php">Autores</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.php">Contacto</a>
-              </li>
-            </ul>
-          </div>
+  <style>
+  /* Fondo personalizado para la barra de navegación */
+  .navbar {
+    background-color: #3498db; /* Cambia el fondo a #3498db */
+  }
+
+  /* Estilo de los enlaces en la barra de navegación */
+  .navbar-nav .nav-link {
+    color: #ffffff; /* Color blanco para los enlaces */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+  }
+
+  /* Estilo para los enlaces al pasar el mouse */
+  .navbar-nav .nav-link:hover {
+    color: #5d5dfc; /* Color de enlace al pasar el mouse */
+    text-decoration: underline; /* Subrayado en el hover */
+  }
+
+  /* Estilo del logo */
+  .navbar-brand {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    color: #ffffff; /* Color blanco para el logo */
+    font-weight: bold; /* Negrita */
+  }
+
+  /* Cambiar el color de la barra de navegación en dispositivos móviles */
+  .navbar-toggler-icon {
+    background-color: #ffffff; /* Cambia el color del ícono de menú */
+  }
+</style>
+
+
+
+  <body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.php">
+          <span class="fw-bolder text-white">El Rincón del Lector</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Libros.php">Libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="autores.php">Autores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.php">Contacto</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+
+
+
+    <style>
+  /* Gradiente personalizado en el texto */
+  .text-gradient {
+    background: linear-gradient(to right, #3498db, #5d5dfc);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>
+
+
       <!-- Page Content-->
       <div class="container px-5 my-5">
         <div class="text-center mb-5">
@@ -135,6 +182,36 @@ h1 {
           </h1>
         </div>
         <body>
+
+
+
+        <style>
+  .autor-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas salten de línea si no caben */
+    gap: 16px; /* Espacio entre tarjetas */
+    justify-content: flex-start; /* Alinea las tarjetas al inicio */
+  }
+  .card {
+    flex: 1 1 calc(30% - 16px); /* Cada tarjeta ocupa 30% del ancho del contenedor menos el espacio del gap */
+    max-width: calc(30% - 16px); /* Máximo ancho de 30% menos el espacio del gap */
+    min-width: 250px; /* Asegura que las tarjetas no sean demasiado pequeñas */
+    box-sizing: border-box; /* Incluye padding y borde en los cálculos de ancho */
+    background-color: #f8f9fa; /* Fondo de color claro */
+    border: 2px solid #3498db; /* Borde de color azul */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 16px; /* Espaciado interno */
+  }
+  .card-header {
+    background-color: #3498db; /* Fondo azul para el encabezado */
+    color: white; /* Texto blanco */
+    padding: 8px;
+    border-radius: 4px 4px 0 0; /* Bordes redondeados solo en la parte superior */
+    font-weight: bold;
+  }
+</style>
+
+        <div class="autor-container">    
     <?php foreach ($autores as $autor): ?>
         <div class="card">
             <div class="card-header">
@@ -152,6 +229,10 @@ h1 {
             </div>
         </div>
     <?php endforeach; ?>
+    <div class="autor-container">
+
+
+
 </body>
       </div>
     </main>
@@ -162,7 +243,7 @@ h1 {
           class="row align-items-center justify-content-between flex-column flex-sm-row"
         >
           <div class="col-auto">
-            <div class="small m-0">Copyright &copy; John Kerlin Silvestre</div>
+            <div class="small m-0">Copyright &copy; Cristal Onedys Hernandez de la Rosa 2024</div>
           </div>
           <!-- <div class="col-auto">
             <a class="small" href="#!">Privacy</a>
